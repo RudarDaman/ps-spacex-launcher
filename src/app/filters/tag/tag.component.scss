@@ -1,0 +1,17 @@
+.tag-wrapper {
+  background-color: #c4e09f;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.active {
+  background-color: #7bb926;
+}
+
+@media only screen and (max-width: 699px) {
+  .tag-wrapper {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,43 @@
+<div *ngIf="spaceLauncher" class="card h-100">
+  <div class="img-wrapper">
+    <img [src]="spaceLauncher.links.mission_patch_small" [alt]="spaceLauncher.mission_name">
+  </div>
+
+  <div class="main-heading">
+    {{ spaceLauncher.mission_name }} #{{ spaceLauncher.flight_number }}
+  </div>
+
+  <div class="card-heading">
+    Mission Ids:
+    <span *ngIf="spaceLauncher.mission_id.length === 0"> - </span>
+  </div>
+  <ul *ngIf="spaceLauncher.mission_id.length > 0" class="mission-list">
+    <li *ngFor="let mission of spaceLauncher.mission_id">
+      {{ mission }}
+    </li>
+  </ul>
+
+  <div class="my-2 d-flex align-items-start">
+    <div class="card-heading">
+      Launch year:
+    </div>
+    {{ spaceLauncher.launch_year }}
+  </div>
+
+  <div class="my-2 d-flex">
+    <div class="card-heading col-6">
+      Successful Launch:
+    </div>
+    {{ spaceLauncher.launch_success }}
+  </div>
+
+  <div class="my-2 d-flex">
+    <div class="card-heading col-6">
+      Successful Landing:
+    </div>
+    <div *ngIf="spaceLauncher.rocket.first_stage.cores[0].land_success else noInfoBlock">
+      {{ spaceLauncher.rocket.first_stage.cores[0].land_success }}
+    </div>
+    <ng-template #noInfoBlock>N/A</ng-template>
+  </div>
+</div>

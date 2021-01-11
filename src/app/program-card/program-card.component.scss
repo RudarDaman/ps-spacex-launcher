@@ -1,0 +1,42 @@
+.card {
+  padding: 1rem;
+  background-color: white;
+
+  .img-wrapper {
+    background: #f2f2f2;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .main-heading {
+    color: darkblue;
+    margin: 1rem 0;
+    font-weight: bold;
+  }
+
+  .card-heading {
+    font-weight: bold;
+    padding: 0;
+  }
+
+  .mission-list {
+    padding: 0 0.5rem;
+    margin: 0.4rem 0;
+
+    li{
+      &::before {
+        content: "•";
+        color: grey;
+        padding-right: 0.5rem;
+        font-size: 1.2rem;
+      }
+
+      &::marker {
+        content: '';
+      }
+    }
+  }
+}

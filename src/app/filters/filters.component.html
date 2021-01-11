@@ -1,0 +1,50 @@
+<div class="filter-wrapper">
+  <div>
+    <b>Filters</b>
+  </div>
+
+  <div class="heading">
+    Launch Year
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-6 col-lg-6 text-center" *ngFor="let year of yearFilterCollection">
+      <app-tag [active]="year === currentFilterSelection?.year"
+               (click)="onUpdateSelection('year', year)"
+               [tagName]="year">
+      </app-tag>
+    </div>
+  </div>
+
+  <div class="heading">
+    Successful Launch
+  </div>
+
+  <div class="row justify-content-center">
+    <app-tag tagName="True"
+             class="col-6 col-lg-6 text-center"
+             (click)="onUpdateSelection('launching', true)"
+             [active]="currentFilterSelection?.launching === true">
+    </app-tag>
+    <app-tag tagName="False"
+             class="col-6 col-lg-6 text-center"
+             (click)="onUpdateSelection('launching', false)"
+             [active]="currentFilterSelection?.launching === false">
+    </app-tag>
+  </div>
+
+  <div class="heading">
+    Successful Landing
+  </div>
+  <div class="row justify-content-center">
+    <app-tag tagName="True"
+             class="col-6 col-lg-6 text-center"
+             (click)="onUpdateSelection('landing', true)"
+             [active]="currentFilterSelection?.landing === true">
+    </app-tag>
+    <app-tag tagName="False"
+             class="col-6 col-lg-6 text-center"
+             (click)="onUpdateSelection('landing', false)"
+             [active]="currentFilterSelection?.landing === false">
+    </app-tag>
+  </div>
+</div>

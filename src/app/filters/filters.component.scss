@@ -1,0 +1,19 @@
+.filter-wrapper {
+  background-color: white;
+  padding: 0.5rem 0.5rem;
+  position: sticky;
+  left: 0;
+  top: 0;
+
+  .heading {
+    border-bottom: 1px solid #f2f2f2;
+    text-align: center;
+    margin: 0.5rem 1rem;
+    color: darkblue;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .filter-wrapper {
+    margin-bottom: 0.75rem;
+  }
+}
