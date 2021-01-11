@@ -9,6 +9,17 @@
 }
 
 .card-wrapper {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 699px) {
+  .card-wrapper {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.copyrights {
+  margin: 1rem auto 2rem;
+  text-align: center;
 }
